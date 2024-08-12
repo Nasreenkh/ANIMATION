@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white; /* White background */
+}
+
+/* Sky container */
+.sky {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Balloon styling */
+.balloon {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9j3UlFzY5eJnKLczNOfiDq98rNug5e9tBQQ&s'); /* Balloon image URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: flyBalloon 10s linear infinite;
+}
+
+/* Different balloon positions and animation durations */
+.balloon1 {
+    left: 10%;
+    bottom: -80px;
+    animation-duration: 15s;
+}
+
+.balloon2 {
+    left: 30%;
+    bottom: -80px;
+    animation-duration: 18s;
+    animation-delay: 2s;
+}
+
+.balloon3 {
+    left: 50%;
+    bottom: -80px;
+    animation-duration: 12s;
+    animation-delay: 4s;
+}
+
+.balloon4 {
+    left: 70%;
+    bottom: -80px;
+    animation-duration: 20s;
+    animation-delay: 1s;
+}
+
+/* Balloon flight animation */
+@keyframes flyBalloon {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-50vh) scale(1.1);
+    }
+    100% {
+        transform: translateY(-100vh) scale(1);
+    }
+}
+
+/* Animation properties for balloons */
+.balloon {
+    animation-timing-function: ease-in-out;  /* Controls the speed at which the animation is executed */
+    animation-iteration-count: infinite;     /* Number of times the animation should repeat */
+    animation-direction: normal;             /* Direction of the animation */
+    animation-fill-mode: forwards;           /* Defines what values are applied by the animation outside the time it is executing */
+    animation-play-state: running;           /* Determines whether the animation is running or paused */
+}
+
+/* H1 Styling with Animation */
+h1 {
+    text-align: center;
+    color: rgb(71, 13, 233);
+    text-decoration: double;
+    text-decoration: italic; /* Italicized text */
+    text-shadow: rgb(19, 14, 14);
+    animation: moveH1 10s linear infinite;
+}
+
+/* H1 Animation */
+@keyframes moveH1 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Animation properties for H1 */
+h1 {
+    animation-timing-function: ease-in-out;  /* Controls the speed at which the animation is executed */
+    animation-iteration-count: infinite;     /* Number of times the animation should repeat */
+    animation-direction: normal;             /* Direction of the animation */
+    animation-fill-mode: forwards;           /* Defines what values are applied by the animation outside the time it is executing */
+    animation-play-state: running;           /* Determines whether the animation is running or paused */
+}
